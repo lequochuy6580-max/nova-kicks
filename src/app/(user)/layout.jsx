@@ -3,16 +3,8 @@ import Link from "next/link";
 
 export default function Layout({ children }) {
   return (
-    <html lang="vi">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Nova Kicks - Premium Streetwear Hub</title>
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
-        <style>{`
+    <>
+      <style>{`
           /* Custom CSS Minimalist phong cách Cyber/Streetwear */
           :root {
             color-scheme: dark;
@@ -213,8 +205,7 @@ export default function Layout({ children }) {
             color: #ffffff;
           }
         `}</style>
-      </head>
-      <body className="d-flex flex-column min-vh-100 bg-black text-white">
+      <div className="d-flex flex-column min-vh-100 bg-black text-white">
         
         {/* HEADER BAR ĐEN TUYỀN THEO HÌNH MẪU */}
         <nav className="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary fixed-top py-3">
@@ -286,7 +277,7 @@ export default function Layout({ children }) {
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      </body>
-    </html>
+      </div>
+    </>
   );
 }

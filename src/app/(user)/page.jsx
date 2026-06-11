@@ -2,7 +2,8 @@ import AddToCart from "@/components/AddToCart";
 
 export default async function Menu() {
   // Thêm cache: 'no-store' để đảm bảo lấy dữ liệu mới nhất từ Mongo khi F5 (Giữ nguyên logic)
-  const res = await fetch('/api/products', { cache: 'no-store' });
+  const baseUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000';
+  const res = await fetch(`${baseUrl}/api/products`, { cache: 'no-store' });
   const productList = await res.json();
 
   // Kiểm tra xem productList có thực sự là mảng không để tránh lỗi .map (Giữ nguyên logic)

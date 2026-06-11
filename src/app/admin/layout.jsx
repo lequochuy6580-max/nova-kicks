@@ -2,21 +2,8 @@ import Link from "next/link";
 
 export default function Layout({ children }) {
   return (
-    <html lang="vi">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Nova-kicks - Dashboard</title>
-
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-        />
-        <link rel="stylesheet" href="/css/admin.css" />
-      </head>
-
-      <body>
-        <div className="sidebar d-flex flex-column p-3">
+    <>
+      <div className="sidebar d-flex flex-column p-3">
           <h3 className="text-center mb-4">
             Nova-kicks<br />ADMIN
           </h3>
@@ -59,7 +46,6 @@ export default function Layout({ children }) {
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-      </body>
-    </html>
+      </>
   );
 }
